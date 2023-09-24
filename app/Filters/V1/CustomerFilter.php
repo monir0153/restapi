@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Services\V1;
+namespace App\Filters\V1;
 
 use Illuminate\Http\Request;
+use App\Filters\ApiFilter;
 
-class CustomerQuery {
+class CustomerFilter extends ApiFilter{
     protected $safeParms = [
         'name' => ['eq'],
         'type' => ['eq'],
@@ -24,7 +25,7 @@ class CustomerQuery {
         'gt'=> '>',
         'lt'=> '<',
         'lte'=> '<=',
-        'gte'=> '=>',
+        'gte'=> '>=',
     ];
 
     // public function transform(Request $request){
